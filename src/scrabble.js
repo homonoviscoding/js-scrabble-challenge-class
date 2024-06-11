@@ -1,7 +1,7 @@
 class Scrabble {
   // Write your implementation here
 
-  result
+  res
   pointRef
   characters
   inputSplit
@@ -37,7 +37,7 @@ class Scrabble {
     }
     this.characters = characters
     this.inputSplit = inputSplit 
-    this.result = result
+    this.res = result
   }
 
   score() {
@@ -47,14 +47,14 @@ class Scrabble {
     }
 
     this.inputSplit = this.characters.toUpperCase().split('')
-    this.result = 0
+    this.res = 0
     for (let i = 0; i < this.inputSplit.length; i++) {
       if (!Object.keys(this.pointRef).includes(this.inputSplit[i])) {
         return 0
       }
-      this.result += this.pointRef[this.inputSplit[i]]
+      this.res += this.pointRef[this.inputSplit[i]]
     }
-    return this.result
+    return this.res
   } 
 }
 let scrabble = new Scrabble('f')
